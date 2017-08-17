@@ -239,7 +239,7 @@ void l1_rate_study()
   /*=================================================================*
    * prepare chains
    *=================================================================*/
-  const std::string data_directory = "2017";
+  const std::string data_directory = "/afs/cern.ch/user/t/tmatsush/public/L1Rate";
   const std::string year = "2017";
   std::vector<TChain*> chains;
   for (size_t ii = 0; ii < fills.size(); ii++)

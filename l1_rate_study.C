@@ -59,7 +59,7 @@ plot_rates(TVirtualPad* pad,
       th1f[nn]->SetYTitle("Single BX Rate [Hz]");
       th1f[nn]->SetTitle("");
       th1f[nn]->SetStats(0);
-      th1f[nn]->SetMarkerStyle(symbols[jj%8]);
+      th1f[nn]->SetMarkerStyle(symbols[jj%8 + ii/(sizeof(colors)/sizeof(colors[0]))]);
       th1f[nn]->SetMarkerSize(0.6);
       th1f[nn]->SetMarkerColor(colors[ii%(sizeof(colors)/sizeof(colors[0]))]);
       nn++;
@@ -233,6 +233,20 @@ void l1_rate_study()
   fills.push_back(6091);
   fills.push_back(6093);
   fills.push_back(6094);
+  fills.push_back(6096);
+  fills.push_back(6097);
+#endif
+#if 1
+  fills.push_back(6098);
+  fills.push_back(6104);
+  fills.push_back(6110);
+  //
+  // L1 menu v3
+  //
+  fills.push_back(6114);
+  fills.push_back(6116);
+  fills.push_back(6119);
+  fills.push_back(6123);
 #endif
 
 
